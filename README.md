@@ -3,6 +3,7 @@
 
 
 ## Summary
+- Job Completed:  February 2022
 - Language:				Python
 - Job type:				Consultation 
 - Job categogy:		API integration, Finance
