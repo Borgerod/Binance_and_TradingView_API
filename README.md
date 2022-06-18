@@ -3,9 +3,9 @@
 
 
 ## Summary
-- Language: Python
-- Job type: Consultation 
-- Job categogy: API integration, Finance
+- Language:       Python
+- Job type:       Consultation 
+- Job categogy:   API integration, Finance
 
 
 ## Project description
