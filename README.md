@@ -8,6 +8,14 @@
 - Job categogy:		API integration, Finance
 - Language:				Python
 
+
+#Norwegian description:
+rådgivning; optimalisering av datastrøm
+Oppdragsgiver ville opprinnelig at jeg skulle lage en kode som hentet aksjedata fra to platformer uten å bruke API. Oppdragsgiver var missfornøyd med API'en da han la merke til at dataen (RSI, Relative Strength Index) fra de to trading platformene ikke matchet med hverandre. Jeg forklarte han at det ikke ville være mulig da en API snakker direkte med serveren. Jeg ville gi han et ordentlig svar han kunne bruke så jeg utforsket dypere. Jeg analyserte med å gjøre to ting; jeg sammenlignet datastrømmen fra APIene (Platform A vs Platform B), i tillegg til å sammenlignet jeg datastrømmen mellom API og platform (selve bruker UIen på nettsiden). Jeg fikk bekreftet at dataen ikke matchet, (funn 1) det var de samme tallene (innenfor et viss slingringsrom) men at datastrømmen fra den ene platformen "lagget" med 15 minutter i forhold til den andre. (funn 2) grunnen var at platform A hentet dataen sin fra Platform B, istedenfor å hente dataen direkte fra kilden, så platform A's datastrømø hadde en mellommann som skapte "laggen". Når jeg justerte tiden på platform A og sammenlignet dem på nytt igjen, lå differansen på gjsn 0.08$, altså en reduksjon på 93%.Det meste av den resterende differansen på 0.08 konkluderte jeg kom i fra "laggen" som kommer fra tiden det tar for platformens server å sende informasjonen (API) VS hvor fort det tar å laste inn dataen på nettsiden. Som kan variere etter en rekke faktorer, derav; hvor mye traffikk platformen generellt opplever, og trafikken som kilden opplever, mengden handelsaktivitet for det gitte produktet.  Jeg la til at den ene platformen har muligens en feil eller annen måte å kalkulere RSI (Relative Strength Index) på, som gir de mer/mindre presise tall. 
+
+
+
+
 ## Project description
 Binance/Tradingview RSI calculation
 The Client was searching for an expert to decipher RSI calculation on Binance/Tradingview platforms because the recommended formula were not matching to the public data feed on the platforms.
